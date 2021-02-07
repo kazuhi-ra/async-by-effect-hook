@@ -45,5 +45,5 @@ export const isUser = (arg: unknown): arg is User => {
 }
 
 export const isUsers = (arg: unknown[]): arg is User[] => {
-  return !arg.some((element) => isUser(element))
+  return !arg.some((element) => !isUser(element))
 }
