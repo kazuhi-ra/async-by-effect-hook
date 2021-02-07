@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 import { User } from 'domains/github/models/user'
 
-type UserState = { users: User[] }
+export type UserState = { users: User[] }
 const initialState: UserState = { users: [] }
 
 export const userSlice = createSlice({
@@ -12,8 +12,8 @@ export const userSlice = createSlice({
     membersGotten: (state, action: PayloadAction<UserState>) => ({
       ...state,
       users: action.payload.users,
-      isLoading: false,
-      error: null,
+      // isLoading: false,
+      // error: null,
     }),
   },
 })
