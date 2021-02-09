@@ -5,17 +5,21 @@ type Props = {
   orgCode?: OrgCode
   users?: User[]
   isLoading?: boolean
+  error: any
 }
 
 export const Members: React.FC<Props> = ({
   orgCode = 'airbnb',
   users = [],
   isLoading = false,
+  error = undefined,
 }) => {
   return (
     <div>
       {isLoading ? (
         <div>Loading...</div>
+      ) : error ? (
+        <div>Error</div>
       ) : (
         <ul>
           {users.map((user) => (

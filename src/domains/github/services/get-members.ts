@@ -1,11 +1,10 @@
 import ky, { Options } from 'ky'
 
-import { OrgCode } from 'data/org-codes'
 import { User, isUsers } from '../models/user'
 import { DEFAULT_API_OPTIONS } from './default-api-options'
 
 export const getMembers = async (
-  orgCode: OrgCode,
+  orgCode: string,
   options?: Options
 ): Promise<User[]> => {
   const mergeOptions: Options = {
