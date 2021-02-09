@@ -12,7 +12,7 @@ export const EnhancedMembers = () => {
   const error = useSelector<UserState, any>((state) => state.error)
 
   useEffect(() => {
-    dispatch(getUsers('applle'))
+    dispatch(getUsers('apple'))
   }, [dispatch])
 
   return <Members users={users} isLoading={isLoading} error={error} />
